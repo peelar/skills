@@ -71,9 +71,9 @@ Independence: multiple comments/commits on one item count once; linked issues, P
 
 ## Write and deliver
 
-Read [references/artifact-contract.md](references/artifact-contract.md) for output schemas and generated-skill behavior. Keep preference claims in the log as the source of truth. On refresh, record scope/state changes; preserve historical evidence and corrections.
+Read [references/artifact-contract.md](references/artifact-contract.md) for output schemas and generated-skill behavior. The generated `SKILL.md` must open with a person-specific profile summary and a findings map linking the most important inferences to log entries. Derive both from the log, which remains the source of truth. On refresh, update the summary/map alongside scope/state changes; preserve historical evidence and corrections.
 
-Before delivery, check frontmatter, matching skill/folder names, relative links, stable IDs, source attribution, evidence thresholds, and unresolved placeholders. Use an available skill validator.
+Before delivery, check frontmatter, matching skill/folder names, relative links, stable IDs, source attribution, evidence thresholds, summary/map consistency with the log, and unresolved placeholders. Use an available skill validator.
 
 Final response:
 

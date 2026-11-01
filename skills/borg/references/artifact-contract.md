@@ -10,7 +10,7 @@ borg-<login>-review/
 
 ## Generated SKILL.md
 
-Substitute the lowercase canonical login in the name/directory; preserve display spelling in prose.
+Substitute the lowercase canonical login in the name/directory; preserve display spelling in prose. Fill the summary and map with actual findings, not workflow instructions. Keep them concise and synchronized with the log; no new claims. Map every major current finding, including material tentative/contested findings with their states. Exclude superseded findings from the current map.
 
 ```markdown
 ---
@@ -19,6 +19,20 @@ description: Review a change through GitHub user <login>'s documented engineerin
 ---
 
 # <login>'s engineering preferences
+
+## Profile summary
+
+<Concise synthesis of this person's demonstrated priorities, tradeoffs, communication, and review attention. Cite entry IDs; state material scope limits and unknowns.>
+
+## Findings map
+
+| Theme | Inferred preference or pattern | When it matters / scope | State | Evidence |
+| --- | --- | --- | --- | --- |
+| <theme> | <concrete finding> | <trigger and applicability> | <state> | [P001](references/preferences.md#p001) |
+
+<Repeat for the most important findings; order by significance.>
+
+## Use this profile
 
 Read all of [references/preferences.md](references/preferences.md) before review or discussion. Frame predictions as inferences from recorded activity, not actual responses or endorsement. Surface provisional/partial coverage when relevant. Use your own voice.
 
@@ -57,9 +71,11 @@ Refresh only when requested, using Borg if available. Otherwise explain that evi
 
 ### Entry schema
 
-Compact ADR-style entries; one per distinct actionable finding. These are inferred preferences, not decisions authored by the person. Omit empty optional fields.
+Compact ADR-style entries; one per distinct actionable finding. These are inferred preferences, not decisions authored by the person. Use stable lowercase ID anchors (`p001`, etc.) for map links. Omit empty optional fields.
 
 ```markdown
+<a id="p001"></a>
+
 ## P001 — <actionable preference>
 
 - State: supported | tentative | contested | superseded
