@@ -5,7 +5,7 @@ description: Create or refresh an evidence-backed developer profile and borg-USE
 
 # Borg
 
-Infer how a developer makes decisions, communicates, and reviews work. Produce a reusable review/discussion skill and a sourced preference log.
+Infer how a developer makes decisions, communicates, and reviews work. Produce a reusable review/discussion skill, a sourced preference log, and `references/coverage.json` for collection metadata and source inventories.
 
 ## Inputs and defaults
 

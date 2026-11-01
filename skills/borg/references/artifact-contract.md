@@ -1,16 +1,17 @@
 # Output contract
 
-Two required files; generated profiles must work without Borg:
+Three required files; generated profiles must work without Borg:
 
 ```text
 borg-<login>-review/
   SKILL.md
   references/preferences.md
+  references/coverage.json
 ```
 
 ## Generated SKILL.md
 
-Substitute the lowercase canonical login in the name/directory; preserve display spelling in prose. Derive all findings from the log and keep both files synchronized.
+Substitute the lowercase canonical login in the name/directory; preserve display spelling in prose. Derive all findings from the log and keep the summary and map synchronized with it.
 
 | Part | Format and purpose |
 | --- | --- |
@@ -78,10 +79,12 @@ Refresh only when requested, using Borg if available. Otherwise explain that evi
 | Section | Required content |
 | --- | --- |
 | Identity | Canonical login, profile URL. |
-| Coverage | Collection/update dates; requested/actual date window and repositories; queries; inspected item URLs. Discovered vs inspected counts by authored PRs, others' PRs, reviews, inline/general comments, issues, issue comments, and attributable commits. Counts may overlap. |
+| Coverage | Brief scope and aggregate discovered/inspected counts; link to `coverage.json`. Counts may overlap. |
 | Limitations | Stopping reason; budgets/operational limits; inaccessible/truncated sources; missing activity types; repository bias; provisional/partial status. For diminishing returns, state what recent batches added/confirmed. |
 | Synthesis | Priorities, tradeoffs, communication patterns, observed review attention, meaningful lifecycle patterns; link entry IDs. Unknowns remain explicit. |
 | Index | ID, title, state, scope, last evidence date. Detailed entries follow in this file. |
+
+Keep PR/issue inventories and per-item inspection metadata exclusively in `coverage.json`. Preference entries still cite the original evidence supporting each claim.
 
 ### Entry schema
 
@@ -116,3 +119,15 @@ Compact ADR-style entries; one per distinct actionable finding. These are inferr
 - Paraphrase faithfully; keep quotations short. No invented links or claims of inspecting inaccessible sources.
 - Merge duplicates; retain old IDs as aliases. Keep contextual differences within entries; preserve unresolved conflict.
 - Refresh preserves sources and dated history. Mark withdrawn/unavailable evidence unverifiable. Keep unsupported user corrections separate from demonstrated preferences.
+
+## references/coverage.json
+
+Collection audit metadata; ordinary review/discussion need not load it.
+
+| Content | Required fields |
+| --- | --- |
+| Scope | Collection/update dates, requested/actual date window, repositories, discovery queries, pagination/access gaps. |
+| Counts | Discovered, retrieved, and inspected counts by activity type; distinguish screening from contextual examination. |
+| Inventories | PRs and issues: URL, author, title, lifecycle status/dates where known, inspection depth, and relevant outcome notes. Preserve existing records on refresh. |
+
+Keep inventories out of `SKILL.md` and `preferences.md`; link to this file when needed. Preserve existing JSON structure where practical.
