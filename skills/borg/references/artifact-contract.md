@@ -10,7 +10,15 @@ borg-<login>-review/
 
 ## Generated SKILL.md
 
-Substitute the lowercase canonical login in the name/directory; preserve display spelling in prose. Fill the summary and map with actual findings, not workflow instructions. Keep them concise and synchronized with the log; no new claims. Map every major current finding, including material tentative/contested findings with their states. Exclude superseded findings from the current map.
+Substitute the lowercase canonical login in the name/directory; preserve display spelling in prose. Derive all findings from the log and keep both files synchronized.
+
+| Part | Format and purpose |
+| --- | --- |
+| Profile summary | 2–3 short paragraphs, roughly 180–250 words. Explain how the strongest priorities connect, what tradeoffs the person accepts, and how they respond to feedback. Use entry IDs for attribution. |
+| Findings map | One compact row per major current finding, with scope, state, and a link to its log entry. Include important tentative/contested findings; exclude superseded ones. |
+| Scope line | Repositories, dates, state counts, and material unknowns. |
+
+The summary should add reasoning and nuance beyond the map. Keep detailed examples, lifecycle narratives, and per-preference explanations in the log. Avoid a paragraph for every finding; greater research depth should improve the synthesis rather than lengthen it.
 
 ```markdown
 ---
@@ -22,7 +30,13 @@ description: Review a change through GitHub user <login>'s documented engineerin
 
 ## Profile summary
 
-<Concise synthesis of this person's demonstrated priorities, tradeoffs, communication, and review attention. Cite entry IDs; state material scope limits and unknowns.>
+<Paragraph 1: connect the strongest demonstrated priorities and explain their practical effect. Cite entry IDs.>
+
+<Paragraph 2: explain accepted tradeoffs and contextual exceptions. Cite entry IDs.>
+
+<Optional paragraph 3: describe observed communication and response to feedback. Cite entry IDs.>
+
+**Scope:** <repositories; dates; state counts; material unknowns>.
 
 ## Findings map
 
